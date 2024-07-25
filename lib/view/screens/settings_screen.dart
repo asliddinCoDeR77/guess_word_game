@@ -22,7 +22,7 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   void _playSound() async {
-    await _audioPlayer.play(AssetSource('assets/sound/sound.mp3'),
+    await _audioPlayer.play(AssetSource('sound/sound.mp3'),
         volume: _soundVolume);
     setState(() {
       _isPlaying = true;

@@ -172,62 +172,64 @@ class OffineGameScreen extends StatelessWidget {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(91, 33, 149, 243),
-        onPressed: () {
-          Get.defaultDialog(
-            backgroundColor: const Color.fromARGB(237, 65, 166, 248),
-            title: "Add Quiz",
-            titleStyle: const TextStyle(color: Colors.white),
-            content: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Column(
-                children: [
-                  const SizedBox(height: 20),
-                  TextFormField(
-                    controller: questionController,
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      labelText: "Input Question",
-                      labelStyle: const TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  TextFormField(
-                    controller: answerController,
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      labelText: "Input Answer",
-                      labelStyle: const TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 50),
-                ],
-              ),
-            ),
-            textConfirm: "Add",
-            onConfirm: () {
-              getxcontroller.addQuize(
-                questionController.text,
-                answerController.text,
-              );
-              Get.back();
-            },
-            textCancel: "Cancel",
-          );
-        },
-        child: const Icon(Icons.add),
-      ),
+
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: const Color.fromARGB(91, 33, 149, 243),
+      //   onPressed: () {
+      //     Get.defaultDialog(
+      //       backgroundColor: const Color.fromARGB(237, 65, 166, 248),
+      //       title: "Add Quiz",
+      //       titleStyle: const TextStyle(color: Colors.white),
+      //       content: Padding(
+      //         padding: const EdgeInsets.all(10),
+      //         child: Column(
+      //           children: [
+      //             const SizedBox(height: 20),
+      //             TextFormField(
+      //               controller: questionController,
+      //               keyboardType: TextInputType.name,
+      //               decoration: InputDecoration(
+      //                 border: OutlineInputBorder(
+      //                   borderRadius: BorderRadius.circular(8),
+      //                 ),
+
+      //                 labelText: "Input Question",
+      //                 labelStyle: const TextStyle(
+      //                   color: Colors.white,
+      //                 ),
+      //               ),
+      //             ),
+      //             const SizedBox(height: 20),
+      //             TextFormField(
+      //               controller: answerController,
+      //               keyboardType: TextInputType.name,
+      //               decoration: InputDecoration(
+      //                 border: OutlineInputBorder(
+      //                   borderRadius: BorderRadius.circular(8),
+      //                 ),
+      //                 labelText: "Input Answer",
+      //                 labelStyle: const TextStyle(
+      //                   color: Colors.white,
+      //                 ),
+      //               ),
+      //             ),
+      //             const SizedBox(height: 50),
+      //           ],
+      //         ),
+      //       ),
+      //       textConfirm: "Add",
+      //       onConfirm: () {
+      //         getxcontroller.addQuize(
+      //           questionController.text,
+      //           answerController.text,
+      //         );
+      //         Get.back();
+      //       },
+      //       textCancel: "Cancel",
+      //     );
+      //   },
+      //   child: const Icon(Icons.add),
+      // ),
     );
   }
 }
